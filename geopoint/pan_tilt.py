@@ -33,5 +33,5 @@ def geodetic_to_pan_tilt_with_offsets(target_lat, target_lon, target_h, origin_l
     pan, tilt = xyz_to_pan_tilt(x_body, y_body, z_body)
     return pan, tilt
 
-def geodetic_to_pan_tilt(target_lat, target_lon, target_h, origin_lat, origin_lon, origin_h):
-    return geodetic_to_pan_tilt_with_offsets(target_lat, target_lon, target_h, origin_lat, origin_lon, origin_h, 0, 0, 0)
+def geodetic_to_pan_tilt(target_lat, target_lon, target_h, origin_lat, origin_lon, origin_h, north_offset):
+    return geodetic_to_pan_tilt_with_offsets(target_lat, target_lon, target_h, origin_lat, origin_lon, origin_h, north_offset, 0, 0)
