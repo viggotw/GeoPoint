@@ -35,3 +35,15 @@ def geodetic_to_pan_tilt_with_offsets(target_lat, target_lon, target_h, origin_l
 
 def geodetic_to_pan_tilt(target_lat, target_lon, target_h, origin_lat, origin_lon, origin_h, north_offset):
     return geodetic_to_pan_tilt_with_offsets(target_lat, target_lon, target_h, origin_lat, origin_lon, origin_h, north_offset, 0, 0)
+
+def pan_tilt_to_target_geodetic(pan, tilt, dist, max_view_distance):
+    """
+    NOT IMPLEMENTED!
+    The function should construct a dome around the PU with radius=max_view_distances.
+    The target (lat,lon,h) is then calculated as the intersection between the ray given by
+    the pan/tilt angle and on of the following:
+    a. earth's surfce
+    b. the dome's surface
+    c. The dist parameter
+    """
+    pass
