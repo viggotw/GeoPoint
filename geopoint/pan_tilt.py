@@ -18,6 +18,8 @@ def cartesian_to_spherical(x, y, z):
     return azimuth, elevation, r
 
 def spherical_to_cartesian(azimuth, elevation, r):
+    azimuth = np.deg2rad(azimuth)
+    elevation = np.deg2rad(elevation)
     x = r * np.cos(elevation) * np.cos(azimuth)
     y = r * np.cos(elevation) * np.sin(azimuth)
     z = r * np.sin(elevation)
